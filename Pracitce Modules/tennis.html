@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Ranks</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: azure;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         
+        }
+       
+        .rank-area{
+            display: flex;
+         }
+        .rank{
+            width: 25%;
+            
+        }
+        .rank img{
+          width: 100%;
+     
+        }
+        .one{
+        -webkit-mask-image: url(data:image/svg+xml;base64,PCEtLT94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/LS0+CiAgICAgICAgICAgICAgPHN2ZyBpZD0ic3ctanMtYmxvYi1zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSI+CiAgICAgICAgICAgICAgICAgICAgPGRlZnM+IAogICAgICAgICAgICAgICAgICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN3LWdyYWRpZW50IiB4MT0iMCIgeDI9IjEiIHkxPSIxIiB5Mj0iMCI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3RvcCBpZD0ic3RvcDEiIHN0b3AtY29sb3I9InJnYmEoMjQ4LCAxMTcsIDU1LCAxKSIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHN0b3AgaWQ9InN0b3AyIiBzdG9wLWNvbG9yPSJyZ2JhKDI1MSwgMTY4LCAzMSwgMSkiIG9mZnNldD0iMTAwJSI+PC9zdG9wPgogICAgICAgICAgICAgICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgICAgICAgICAgICAgIDwvZGVmcz4KICAgICAgICAgICAgICAgIDxwYXRoIGZpbGw9InVybCgjc3ctZ3JhZGllbnQpIiBkPSJNMjQuOCwtMjcuM0MzMi41LC0yMywzOS41LC0xNS42LDQyLjMsLTYuNEM0NS4yLDIuNyw0My44LDEzLjYsMzguNCwyMS4zQzMyLjksMjguOSwyMy4zLDMzLjMsMTMuNSwzNi42QzMuNywzOS45LC02LjIsNDIuMiwtMTUuMywzOS45Qy0yNC40LDM3LjUsLTMyLjYsMzAuNSwtMzUuMywyMi4yQy0zOCwxMy44LC0zNS4yLDQsLTMzLjcsLTYuM0MtMzIuMywtMTYuNSwtMzIuMiwtMjcuNCwtMjYuOCwtMzIuMUMtMjEuNCwtMzYuOCwtMTAuNywtMzUuNCwtMS4xLC0zNC4xQzguNSwtMzIuOCwxNywtMzEuNiwyNC44LC0yNy4zWiIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTAgNTApIiBzdHJva2Utd2lkdGg9IjAiIHN0eWxlPSJ0cmFuc2l0aW9uOiBhbGwgMC4zcyBlYXNlIDBzOyI+PC9wYXRoPgogICAgICAgICAgICAgIDwvc3ZnPg==);
+        }
+        .two{
+            -webkit-mask-image: url(data:image/svg+xml;base64,PCEtLT94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/LS0+CiAgICAgICAgICAgICAgPHN2ZyBpZD0ic3ctanMtYmxvYi1zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSI+CiAgICAgICAgICAgICAgICAgICAgPGRlZnM+IAogICAgICAgICAgICAgICAgICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN3LWdyYWRpZW50IiB4MT0iMCIgeDI9IjEiIHkxPSIxIiB5Mj0iMCI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3RvcCBpZD0ic3RvcDEiIHN0b3AtY29sb3I9InJnYmEoMjQ4LCAxMTcsIDU1LCAxKSIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHN0b3AgaWQ9InN0b3AyIiBzdG9wLWNvbG9yPSJyZ2JhKDI1MSwgMTY4LCAzMSwgMSkiIG9mZnNldD0iMTAwJSI+PC9zdG9wPgogICAgICAgICAgICAgICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgICAgICAgICAgICAgIDwvZGVmcz4KICAgICAgICAgICAgICAgIDxwYXRoIGZpbGw9InVybCgjc3ctZ3JhZGllbnQpIiBkPSJNMjguMSwtMzAuNkMzNS44LC0yNyw0MC45LC0xNy42LDQxLjksLThDNDIuOCwxLjYsMzkuNSwxMS4yLDMzLjksMTguMkMyOC4yLDI1LjEsMjAuMiwyOS4yLDEyLjQsMzAuNkM0LjYsMzIsLTMsMzAuNSwtMTEuNSwyOC43Qy0yMC4xLDI2LjksLTI5LjUsMjQuNywtMzUuOSwxOC40Qy00Mi40LDEyLjEsLTQ1LjgsMS43LC00My40LC03Qy00MS4xLC0xNS43LC0zMywtMjIuNywtMjQuOCwtMjYuMkMtMTYuNiwtMjkuNiwtOC4zLC0yOS42LDAuOSwtMzAuN0MxMC4yLC0zMS44LDIwLjQsLTM0LjEsMjguMSwtMzAuNloiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUwIDUwKSIgc3Ryb2tlLXdpZHRoPSIwIiBzdHlsZT0idHJhbnNpdGlvbjogYWxsIDAuM3MgZWFzZSAwczsiPjwvcGF0aD4KICAgICAgICAgICAgICA8L3N2Zz4=);
+        }
+        .three{
+            -webkit-mask-image: url(data:image/svg+xml;base64,PCEtLT94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/LS0+CiAgICAgICAgICAgICAgPHN2ZyBpZD0ic3ctanMtYmxvYi1zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSI+CiAgICAgICAgICAgICAgICAgICAgPGRlZnM+IAogICAgICAgICAgICAgICAgICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN3LWdyYWRpZW50IiB4MT0iMCIgeDI9IjEiIHkxPSIxIiB5Mj0iMCI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3RvcCBpZD0ic3RvcDEiIHN0b3AtY29sb3I9InJnYmEoMjQ4LCAxMTcsIDU1LCAxKSIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHN0b3AgaWQ9InN0b3AyIiBzdG9wLWNvbG9yPSJyZ2JhKDI1MSwgMTY4LCAzMSwgMSkiIG9mZnNldD0iMTAwJSI+PC9zdG9wPgogICAgICAgICAgICAgICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgICAgICAgICAgICAgIDwvZGVmcz4KICAgICAgICAgICAgICAgIDxwYXRoIGZpbGw9InVybCgjc3ctZ3JhZGllbnQpIiBkPSJNMjIuMSwtMjQuMUMyOS40LC0yMC4zLDM2LjQsLTE0LDM5LjIsLTUuOEM0Mi4xLDIuNSw0MC43LDEyLjYsMzYuMiwyMS40QzMxLjcsMzAuMiwyNC4xLDM3LjcsMTUuNSwzOS41QzYuOSw0MS40LC0yLjcsMzcuNiwtOS45LDMyLjZDLTE3LDI3LjYsLTIxLjgsMjEuNSwtMjcuNCwxNC41Qy0zMyw3LjUsLTM5LjUsLTAuMywtMzguOSwtNy40Qy0zOC4zLC0xNC41LC0zMC42LC0yMC44LC0yMi45LC0yNC41Qy0xNS4yLC0yOC4yLC03LjYsLTI5LjEsLTAuMSwtMjlDNy41LC0yOSwxNC45LC0yNy44LDIyLjEsLTI0LjFaIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MCA1MCkiIHN0cm9rZS13aWR0aD0iMCIgc3R5bGU9InRyYW5zaXRpb246IGFsbCAwLjNzIGVhc2UgMHM7Ij48L3BhdGg+CiAgICAgICAgICAgICAgPC9zdmc+);
+        
+        }
+        .four{
+            -webkit-mask-image: url(data:image/svg+xml;base64,PCEtLT94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/LS0+CiAgICAgICAgICAgICAgPHN2ZyBpZD0ic3ctanMtYmxvYi1zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSI+CiAgICAgICAgICAgICAgICAgICAgPGRlZnM+IAogICAgICAgICAgICAgICAgICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN3LWdyYWRpZW50IiB4MT0iMCIgeDI9IjEiIHkxPSIxIiB5Mj0iMCI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3RvcCBpZD0ic3RvcDEiIHN0b3AtY29sb3I9InJnYmEoMjQ4LCAxMTcsIDU1LCAxKSIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHN0b3AgaWQ9InN0b3AyIiBzdG9wLWNvbG9yPSJyZ2JhKDI1MSwgMTY4LCAzMSwgMSkiIG9mZnNldD0iMTAwJSI+PC9zdG9wPgogICAgICAgICAgICAgICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgICAgICAgICAgICAgIDwvZGVmcz4KICAgICAgICAgICAgICAgIDxwYXRoIGZpbGw9InVybCgjc3ctZ3JhZGllbnQpIiBkPSJNMTcuMiwtMjAuMUMxOS40LC0xOC43LDE2LjMsLTEwLjUsMTcsLTMuNEMxNy44LDMuNiwyMi40LDkuNiwyMS43LDE0LjJDMjEsMTguOCwxNS4xLDIyLDcuOCwyNy4xQzAuNSwzMi4yLC04LjIsMzkuMiwtMTIuMiwzNi41Qy0xNi4yLDMzLjcsLTE1LjYsMjEuMiwtMjAsMTIuMkMtMjQuNCwzLjIsLTMzLjgsLTIuMiwtMzQuMSwtN0MtMzQuNCwtMTEuNywtMjUuNiwtMTUuOSwtMTguNCwtMTYuNEMtMTEuMiwtMTYuOSwtNS42LC0xMy45LDEsLTE1QzcuNSwtMTYuMiwxNSwtMjEuNSwxNy4yLC0yMC4xWiIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTAgNTApIiBzdHJva2Utd2lkdGg9IjAiIHN0eWxlPSJ0cmFuc2l0aW9uOiBhbGwgMC4zcyBlYXNlIDBzOyI+PC9wYXRoPgogICAgICAgICAgICAgIDwvc3ZnPg==);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1 class="title-heading">Tannis Ranks 2024</h1>
+        </div>
+  
+        <!-- .rank-area>.rank-$*4>img -->
+        <div class="rank-area">
+            <div class="rank one"><img src="./fem1.webp" alt=""></div>
+            <div class="rank two"><img src="./fem2.webp" alt=""></div>
+            <div class="rank three"><img src="./fem3.webp" alt=""></div>
+            <div class="rank four"><img src="./fem4.webp" alt=""></div>
+        </div>
+       
+        </div>
+    </div>
+    
+</body>
+</html>

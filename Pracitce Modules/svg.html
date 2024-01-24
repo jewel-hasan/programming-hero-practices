@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scalable Vector Graphic(SVG)</title>
+    <style>
+        .container{
+            width: 90%;
+            height:90%;
+            background-color: #81f6ff;
+            border: 1px solid gray;
+            border-radius: 10px;
+           
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui repellat fugiat voluptatum consectetur id eum quaerat culpa, maiores illum eaque officiis mollitia deleniti commodi saepe nam similique, quod ad cum.</p>
+<svg width="500" height="450" >
+    <defs>
+        <clipPath id="circleView">     
+            <circle cx="100" cy="100" r="150" /> 
+        </clipPath>
+    </defs>
+<image width="500" height="450" xlink:href="./img.jpg" clip-path="url(#circleView)"/>
+      
+   
+       
+ 
+
+
+</svg>
+
+   </div> 
+</body>
+</html>

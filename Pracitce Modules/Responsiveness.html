@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <style>
+        .heading{
+            color: blue;
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: center;
+            text-decoration: underline;
+        }
+        .fruit-ara{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+           
+        }
+        .fruit{
+            border: 2px solid tomato;
+            border-radius: 10px;
+        }
+        .fruit img{
+            width: 200px;
+            height: 300px;
+        }
+
+        @media screen and (max-width:576px) {
+            .fruit-ara{
+                grid-template-columns: repeat(1, 1fr);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1 class="title">Responsiveness Using Simple Media Query</h1>
+    </div>
+<!-- .fruit-ara>.fruit*12>img[src="fruit.webp"]+h3{Fruit-$}+p{Price: $00}+p>lorem7 -->
+<div class="fruit-ara">
+    <div class="fruit">
+        <img src="fruit.webp" alt="">
+        <h3>Fruit-1</h3>
+        <p>Price: 100</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="fruit">
+        <img src="fruit.webp" alt="">
+        <h3>Fruit-2</h3>
+        <p>Price: 200</p>
+        <p>Asperiores, nihil ducimus? Recusandae, autem.</p>
+    </div>
+    <div class="fruit">
+        <img src="fruit.webp" alt="">
+        <h3>Fruit-3</h3>
+        <p>Price: 300</p>
+        <p>Sequi facere ex quia explicabo!</p>
+    </div>
+    <div class="fruit">
+        <img src="fruit.webp" alt="">
+        <h3>Fruit-4</h3>
+        <p>Price: 400</p>
+        <p>Dolores aliquid optio quasi cupiditate!</p>
+    </div>
+    <div class="fruit">
+        <img src="fruit.webp" alt="">
+        <h3>Fruit-5</h3>
+        <p>Price: 500</p>
+        <p>Perspiciatis voluptate qui minima distinctio.</p>
+    </div>
+    <div class="fruit">
+        <img src="fruit.webp" alt="">
+        <h3>Fruit-6</h3>
+        <p>Price: 600</p>
+        <p>Laboriosam nisi explicabo inventore delectus?</p>
+    </div>
+    <div class="fruit">
+        <img src="fruit.webp" alt="">
+        <h3>Fruit-7</h3>
+        <p>Price: 700</p>
+        <p>Corporis similique ad aut cum.</p>
+    </div>
+    <div class="fruit">
+        <img src="fruit.webp" alt="">
+        <h3>Fruit-8</h3>
+        <p>Price: 800</p>
+        <p>Cumque molestias nulla doloremque beatae?</p>
+    </div>
+    <div class="fruit">
+        <img src="fruit.webp" alt="">
+        <h3>Fruit-9</h3>
+        <p>Price: 900</p>
+        <p>Animi voluptates maiores laudantium debitis.</p>
+    </div>
+    <div class="fruit">
+        <img src="fruit.webp" alt="">
+        <h3>Fruit-10</h3>
+        <p>Price: 1000</p>
+        <p>Dolor debitis recusandae fuga unde.</p>
+    </div>
+    <div class="fruit">
+        <img src="fruit.webp" alt="">
+        <h3>Fruit-11</h3>
+        <p>Price: 1100</p>
+        <p>Odio perferendis qui ea nisi?</p>
+    </div>
+    <div class="fruit">
+        <img src="fruit.webp" alt="">
+        <h3>Fruit-12</h3>
+        <p>Price: 1200</p>
+        <p>Placeat fuga aperiam voluptatum totam!</p>
+    </div>
+</div>
+
+
+</body>
+</html>
